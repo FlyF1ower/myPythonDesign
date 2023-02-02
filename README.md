@@ -37,17 +37,17 @@ Tensorflow是一个采用数据流图用于数值计算的开源软件库，用�
 下载并解压ChnSentiCorp_htl_ba_2000.rar文件，得到的文件夹中包含neg（负向语料）和pos（正向语料）两个文件夹，而文件夹中的每一篇评论为一个txt文档，为了方便之后的操作，需要把正向和负向评论分别规整到对应的一个txt文件中，即正向语料的集合文档（命名为2000_pos.txt）和负向语料的集合文档（命名为2000_neg.txt）。
 具体Python实现代码如下所示：
 
-![1_process--文档处理代码](http://upload-images.jianshu.io/upload_images/5189322-0be01e42195ba4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="http://upload-images.jianshu.io/upload_images/5189322-0be01e42195ba4c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1_process--文档处理代码" style="zoom:200%;" />
 
 运行完成后得到2000_pos.txt和2000_neg.txt两个文本文件，分别存放正向评论和负向评论，每篇评论为一行。文档部分截图如下所示：
 
-![酒店评论截图](http://upload-images.jianshu.io/upload_images/5189322-6af94cd73084d1eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="http://upload-images.jianshu.io/upload_images/5189322-6af94cd73084d1eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="酒店评论截图" style="zoom:200%;" />
 
 #### 3.2 中文文本分词
 本文采用**结巴分词**分别对正向语料和负向语料进行分词处理。特别注意，在执行代码前需要把txt源文件手动转化成UTF-8格式，否则会报中文编码的错误。在进行分词前，需要对文本进行去除数字、字母和特殊符号的处理，使用python自带的**string**和**re**模块可以实现，其中string模块用于处理字符串操作，re模块用于正则表达式处理。
 具体实现代码如下所示：
 
-![2_cutsentence--结巴分词代码](http://upload-images.jianshu.io/upload_images/5189322-f8b7fae53bfad5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="http://upload-images.jianshu.io/upload_images/5189322-f8b7fae53bfad5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2_cutsentence--结巴分词代码" style="zoom:200%;" />
 
 处理完成后，得到2000_pos_cut.txt和2000_neg_cut.txt两个txt文件，分别存放正负向语料分词后的结果。分词结果部分截图如下所示：
 

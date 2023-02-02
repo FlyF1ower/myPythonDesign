@@ -46,7 +46,7 @@ x_pca = PCA(n_components = 100).fit_transform(x)
 clf = svm.SVC(C = 2, probability = True)
 clf.fit(x_pca,y)
 
-print 'Test Accuracy: %.2f'% clf.score(x_pca,y)
+print('Test Accuracy: %.2f'% clf.score(x_pca,y))
 
 #Create ROC curve
 pred_probas = clf.predict_proba(x_pca)[:,1] #score
